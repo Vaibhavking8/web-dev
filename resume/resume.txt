@@ -1,0 +1,57 @@
+Vaibhav Gupta
+VIT Vellore, Tamil Nadu - 632014
+bibhu.2005ssj@gmail.com | 8527889187 | www.linkedin.com/in/vaibhav-gupta-96158827b | https://github.com/Vaibhavking8
+
+Objective
+Enthusiastic and driven AI Software Engineering student with a strong foundation in computer science, programming, and machine learning. Seeking an entry-level role to apply academic knowledge and project experience in solving real-world problems, contributing to the field of AI and software development.
+
+Education
+Vellore Institute of Technology – Vellore, India
+Bachelor of Technology, Computer Science and Engineering (IoT)
+2023 - 2027 | CGPA: 9.3/10
+
+Relevant Skills: C++, C, Python, Java, Japanese, Data Structures & Algorithms, Web Programming
+Indian Institute of Technology, Madras – Chennai, India
+Bachelor of Science, Data Science
+2023 - 2027 | CGPA: 8.6/10
+
+Relevant Skills: Python, Machine Learning, Data Structures & Algorithms in Python
+Air Force Golden Jubilee Institute – New Delhi, India
+High School Diploma, Engineering
+2021 - 2023 | Grade: A+
+
+Activities: Hackathon, Arts Club
+
+Skills
+Programming Languages: Python, C++, Java, C
+Machine Learning: Supervised ML, Regression, Classification, Natural Language Processing
+Frameworks & Tools: Flask, React.js, Microsoft Fabric, Azure AI Language
+Data Science: Data Engineering, Data Analysis, Microsoft Azure, Algorithms
+Other: Japanese Language Proficiency, Unity Game Development
+Certifications
+CS50x (Harvard University)
+Skills: Python, C, Flask
+Microsoft Applied Skills: Implement a Data Science and Machine Learning Solution with Microsoft Fabric
+Skills: Data Science, Machine Learning, Microsoft Fabric, Data Engineering
+Microsoft Certified: Azure Data Scientist Associate
+Skills: Microsoft Azure, Machine Learning
+Supervised Machine Learning: Regression and Classification (Coursera)
+Build a Natural Language Processing Solution with Azure AI Language
+Python Certification (HackerRank)
+Unity Certification Course (Programming Hub)
+
+Projects
+Tower of Hanoi - Interactive Web Game
+Nov 2024 - Dec 2024
+
+Developed an interactive web application for the Tower of Hanoi puzzle using React.js.
+Features: Drag-and-drop interface, dynamic disk sizing, and engaging audio-visual feedback.
+Part of the CS50x coursework.
+Skills Used: React.js, Web Development
+
+Achievements & Activities
+Participated in national-level Hackathons, gaining hands-on experience in problem-solving and collaboration.
+Active member of the Arts Club, fostering creativity and teamwork.
+Additional Information
+Open to internships and entry-level opportunities in AI, machine learning, and software development.
+Portfolio and project repository: [GitHub Profile Link]

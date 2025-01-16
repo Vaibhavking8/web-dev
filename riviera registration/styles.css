@@ -1,0 +1,177 @@
+* {
+    cursor: url('images/cursor.svg'), auto;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black; 
+    color: white;
+}
+
+.nav {
+    background-color: black;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    height: 80vh; /* viewport height */
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url("images/img1.webp"), url("images/img2.webp"), url("images/img3.webp"), url("images/img4.webp");
+    background-size: cover; /* Covers the full viewport */
+    background-position: center center; /* Centers the image */
+    background-repeat: no-repeat;
+    animation: slide 12s infinite;
+    z-index: -1;
+}
+
+.header-content {
+    text-align: center;
+    color: white;
+    padding-top: 30vh; /* Centered in the viewport */
+}
+
+.header-content h1 {
+    font-size: 50px;
+    margin: 0;
+}
+
+.header-content p {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    gap: 10px;
+    position: sticky;
+    top: 0; 
+    z-index: 10;
+}
+
+.controls select,
+.controls input {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333; 
+    color: white;
+}
+
+.controls input {
+    flex-grow: 1;
+}
+
+.event-cards {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 20px;
+    background-color: black; 
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    width: 90%; 
+    max-width: 800px; 
+    margin: 15px 0;
+    background-color: #1c1c1c; 
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2); 
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 200px;
+    height: 200px;
+    object-fit: fill; 
+    border-radius: 5px;
+    flex-shrink: 0;
+}
+
+.card-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    color: white; 
+}
+
+.card-content h3 {
+    margin: 0 0 5px;
+    font-size: 20px;
+    color: #00d1ff;
+}
+
+.card-content h4 {
+    margin: 0 0 10px;
+    font-size: 16px;
+    color: #ffa500;
+}
+
+.card-content p {
+    margin: 0 0 10px;
+    font-size: 14px;
+    color: #dddddd;
+}
+
+.card-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.card-content form input[type="radio"] {
+    margin: 0; 
+    padding: 0; 
+    vertical-align: middle;
+}
+
+.card-content button {
+    align-self: start;
+    padding: 8px 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.card-content button:hover {
+    cursor: url('images/cursor2.svg'), auto;
+    background-color: #0056b3;
+}
+
+@keyframes slide {
+    0% { background-image: url("images/img1.webp"); }
+    25% { background-image: url("images/img2.webp"); }
+    50% { background-image: url("images/img3.webp"); }
+    75% { background-image: url("images/img4.webp"); }
+    100% { background-image: url("images/img1.webp"); }
+}

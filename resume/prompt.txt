@@ -1,0 +1,39 @@
+Write a resume in proper format.
+Target role: AI Software Engineer
+
+Education:
+- Vellore Institute of Technology
+Bachelor of Technology, CSE(IOT)
+2023 - 2027
+Grade: 9.3 CGPA
+Skills: C++ · C (Programming Language) · Python (Programming Language) · Java · Japanese . Data Structure and Algorithm . Web programming
+
+- Indian Institute of Technology, Madras
+Bachelor of Science - BS, Data Science
+2023 - 2027
+Grade: 8.6 CGPA
+Skills: Python (Programming Language) · Machine Learning . Data Structure and Algorithm in Python
+
+- Air Force Golden Jubliee Institute
+High School Diploma, Engineering
+2021 - 2023
+Grade: A+
+Activities and societies: Hackathon, Arts club
+
+Licenses & certifications:
+- CS50x
+Skills: Python (Programming Language) · C (Programming Language) · Flask
+- Microsoft Applied Skills: Implement a data science and machine learning solution with Microsoft Fabric
+Skills: Data Science · Microsoft Fabric · Machine Learning · Data Engineering
+- Microsoft Certified: Azure Data Scientist Associate
+Skills: Microsoft Azure · Machine Learning
+- Supervised Machine Learning: Regression and Classification, Coursera
+- Build a natural language processing solution with Azure AI Language
+- Python, HackerRank
+- Unity Certification Course , Programming Hub
+
+Projects
+Tower of Hanoi - Interactive Web Game
+Nov 2024 - Dec 2024
+An interactive web application implementing the Tower of Hanoi puzzle using React, featuring a drag-and-drop interface, dynamic disk sizing, and audio-visual feedback. Developed as part of CS50x.An interactive web application implementing the Tower of Hanoi puzzle using React, featuring a drag-and-drop interface, dynamic disk sizing, and audio-visual feedback. Developed as part of CS50x.
+React.js and Web Development

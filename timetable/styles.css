@@ -1,0 +1,66 @@
+/* Page styling */
+body {
+    margin: 0;
+    padding: 0;
+    border: 0 1px 1px 1px solid rgb(92, 172, 218); 
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header styling */
+.card-header {
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    width: 96%;
+}
+
+/* Top border styling */
+.primaryBorderTop {
+    border-width: 3px 0 0 0;
+    border-style: solid;
+    border-color: rgb(92, 172, 218);
+}
+
+/* Heading styling */
+.h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Table styling */
+table {
+    border: 2px solid #3c8dbc;
+    border-collapse: collapse;
+    margin: 10px auto; 
+    width: 95%;
+}
+
+/* Table header and cell styling */
+th, td {
+    border: 1px solid #3c8dbc;
+    border-collapse: collapse;
+    text-align: center;
+    vertical-align: middle;
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    padding: 7px; 
+    width: auto; 
+}
+
+td {
+    background-color: #FFFFFF;
+}
+
+.main {
+    background-color: #e2e2e2;
+}
+
+.lec {
+    background-color: #FC6C85;
+    color: #000;
+    text-align: center;
+    vertical-align: middle;
+    padding: 7px;
+}

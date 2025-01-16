@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>User Login - Public Distribution System</title>
+    <style>
+        .login-container {
+            max-width: 400px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .login-title {
+            background-color: #006400;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 4px;
+            margin: -20px -20px 20px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            border-color: #006400;
+            box-shadow: 0 0 5px rgba(0,100,0,0.2);
+        }
+
+        .login-btn {
+            width: 100%;
+            background: #006400;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        .login-btn:hover {
+            background: #004d00;
+        }
+
+        .forgot-links {
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .forgot-links a {
+            color: #006400;
+            text-decoration: none;
+            font-size: 14px;
+            margin: 0 10px;
+        }
+
+        .forgot-links a:hover {
+            text-decoration: underline;
+        }
+
+        .register-link {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .register-link a {
+            color: #006400;
+            text-decoration: none;
+        }
+
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+
+        .captcha-container {
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        .captcha-box {
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .captcha-image {
+            font-family: 'Courier New', monospace;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 5px;
+            color: #333;
+            text-decoration: line-through;
+            background: white;
+            padding: 5px 15px;
+            border-radius: 4px;
+        }
+
+        .refresh-captcha {
+            background: none;
+            border: none;
+            color: #006400;
+            cursor: pointer;
+            margin-left: 10px;
+            font-size: 18px;
+        }
+
+        .error-message {
+            color: #d32f2f;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .help-text {
+            color: #666;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-button">☰ Menu</label>
+    
+    <nav class="side-menu">
+        <ul>
+            <li><a href="add_new.html">Add Member</a></li>
+            <li><a href="change_address.html">To Change Address</a></li>
+            <li><a href="change_head.html">To Change the Head of the Family</a></li>
+            <li><a href="remove_member.html">Remove Family Member</a></li>
+            <li><a href="#">To Know the Service Status Related to the Card</a></li>
+            <li><a href="#">Check Ration Card Status</a></li>
+            <li><a href="update_mobile.html">Update Mobile Number</a></li>
+            <li><a href="#">Download Ration Card</a></li>
+            <li> </li>
+            <li><a href="index.html"><div class="icon home">🏠 Home</div></a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="header-contact">
+            📞 1967 (A) 1800-425-5901
+        </div>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo" />
+        </div>
+        <h1>PUBLIC DISTRIBUTION SYSTEM</h1>
+        <p>Department of Food Supply and Consumer Protection</p>
+    </header>
+
+    <div class="main-container">
+        <div class="login-container">
+            <div class="login-title">
+                <h2>User Login</h2>
+            </div>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <label>Ration Card Number</label>
+                    <input type="text" required pattern="[0-9]{12}" title="Please enter valid 12-digit ration card number">
+                    <div class="error-message">Please enter a valid ration card number</div>
+                </div>
+
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" required>
+                    <div class="help-text">Password should be at least 8 characters long</div>
+                    <div class="error-message">Please enter your password</div>
+                </div>
+
+                <div class="captcha-container">
+                    <div class="captcha-box">
+                        <div class="captcha-image">XY5K9M</div>
+                        <button type="button" class="refresh-captcha">🔄</button>
+                    </div>
+                    <input type="text" placeholder="Enter Captcha" required>
+                    <div class="error-message">Please enter the captcha correctly</div>
+                </div>
+
+                <button type="submit" class="login-btn">Login</button>
+
+                <div class="forgot-links">
+                    <a href="#">Forgot Password?</a>
+                    <a href="#">Forgot Ration Card Number?</a>
+                </div>
+
+                <div class="register-link">
+                    New User? <a href="#">Register Here</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Law and Rules</h4>
+                <ul>
+                    <li><a href="#">NFSA Act 2013</a></li>
+                    <li><a href="#">Tamil Nadu Food Safety Rules 2017</a></li>
+                    <li><a href="#">Essential Commodities Act</a></li>
+                    <li><a href="#">Gazette Act 2019</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Grievance Resolution</h4>
+                <ul>
+                    <li><a href="#">State Food Authority</a></li>
+                    <li><a href="#">District Grievance Redressal Officers</a></li>
+                    <li><a href="#">Text Messaging Service</a></li>
+                    <li><a href="#">Monitoring Committee Reports</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Other Links</h4>
+                <ul>
+                    <li><a href="#">Consumer Protection Department</a></li>
+                    <li><a href="#">Tamil Nadu Consumer Goods Corporation</a></li>
+                    <li><a href="#">Register of Cooperative Societies</a></li>
+                    <li><a href="#">Election Commission</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025 Department of Food Supply and Consumer Protection, Government of Tamil Nadu</p>
+        </div>
+    </footer>
+</body>
+</html>

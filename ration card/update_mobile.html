@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Update Mobile Number - Ration Card Update Portal</title>
+    <style>
+        .form-container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .form-title {
+            background-color: #006400;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .submit-btn {
+            background: #006400;
+            color: white;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #004d00;
+        }
+
+        .required {
+            color: red;
+            margin-left: 3px;
+        }
+
+        .info-box {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .info-box ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .info-box li {
+            margin-bottom: 5px;
+        }
+
+        .verification-section {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            display: none;
+        }
+
+        .verification-section.active {
+            display: block;
+        }
+
+        .current-number {
+            background: #f8f8f8;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .otp-inputs {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin: 15px 0;
+        }
+
+        .otp-input {
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            font-size: 18px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-button">☰ Menu</label>
+    
+    <nav class="side-menu">
+        <ul>
+            <li><a href="add_new.html">Add Member</a></li>
+            <li><a href="change_address.html">To Change Address</a></li>
+            <li><a href="change_head.html">To Change the Head of the Family</a></li>
+            <li><a href="remove_member.html">Remove Family Member</a></li>
+            <li><a href="https://www.tnpds.gov.in/pages/servicerequest/service-request-status-1.xhtml">To Know the Service Status Related to the Card</a></li>
+            <li><a href="#">Check Ration Card Status</a></li>
+            <li><a href="update_mobile.html">Update Mobile Number</a></li>
+            <li><a href="#">Download Ration Card</a></li>
+            <li> </li>
+            <li><a href="index.html"><div class="icon home">🏠 Home</div></a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="header-contact">
+            📞 1967 (A) 1800-425-5901
+        </div>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo" />
+        </div>
+        <h1>PUBLIC DISTRIBUTION SYSTEM</h1>
+        <p>Department of Food Supply and Consumer Protection</p>
+    </header>
+
+    <div class="main-container">
+        <div class="form-container">
+            <div class="form-title">
+                <h2>Update Mobile Number</h2>
+            </div>
+
+            <div class="info-box">
+                <strong>Important Information:</strong>
+                <ul>
+                    <li>You will need to verify both your old and new mobile numbers</li>
+                    <li>OTP will be sent to both numbers for verification</li>
+                    <li>Only the head of the family can update the mobile number</li>
+                    <li>Update will be reflected within 24 hours</li>
+                </ul>
+            </div>
+            
+            <form id="updateMobileForm">
+                <div class="form-group">
+                    <label>Ration Card Number<span class="required">*</span></label>
+                    <input type="text" required pattern="[0-9]{12}" title="Please enter a valid 12-digit ration card number">
+                </div>
+
+                <div class="current-number">
+                    <label>Currently Registered Mobile Number:</label>
+                    <div>XXXXX-XX789</div>
+                </div>
+
+                <div class="form-group">
+                    <label>New Mobile Number<span class="required">*</span></label>
+                    <input type="tel" required pattern="[0-9]{10}" title="Please enter a valid 10-digit mobile number">
+                    <small style="color: #666; display: block; margin-top: 5px;">
+                        Enter 10-digit mobile number without country code
+                    </small>
+                </div>
+
+                <div class="form-group">
+                    <label>Confirm New Mobile Number<span class="required">*</span></label>
+                    <input type="tel" required pattern="[0-9]{10}" title="Please enter a valid 10-digit mobile number">
+                </div>
+
+                <div class="verification-section">
+                    <h3>Verify Old Number</h3>
+                    <p>Enter the OTP sent to XXXXX-XX789</p>
+                    <div class="otp-inputs">
+                        <input type="text" class="otp-input" maxlength="1" pattern="[0-9]">
+                        <input type="text" class="otp-input" maxlength="1" pattern="[0-9]">
+                        <input type="text" class="otp-input" maxlength="1" pattern="[0-9]">
+                        <input type="text" class="otp-input" maxlength="1" pattern="[0-9]">
+                        <input type="text" class="otp-input" maxlength="1" pattern="[0-9]">
+                        <input type="text" class="otp-input" maxlength="1" pattern="[0-9]">
+                    </div>
+                </div>
+
+                <div class="verification-section">
+                    <h3>Verify New Number</h3>
+                    <p>Enter the OTP sent to the new number</p>
+                    <div class="otp-inputs">
+                        <input type="text" class="otp-input" maxlength="1" pattern="[0-9]">
+                        <input type="text" class="otp-input" maxlength="1" pattern="[0-9]">
+                        <input type="text" class="otp-input" maxlength="1" pattern="[0-9]">
+                        <input type="text" class="otp-input" maxlength="1" pattern="[0-9]">
+                        <input type="text" class="otp-input" maxlength="1" pattern="[0-9]">
+                        <input type="text" class="otp-input" maxlength="1" pattern="[0-9]">
+                    </div>
+                </div>
+
+                <div class="btn-container">
+                    <button type="submit" class="submit-btn">Update Mobile Number</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Law and Rules</h4>
+                <ul>
+                    <li><a href="#">NFSA Act 2013</a></li>
+                    <li><a href="#">Tamil Nadu Food Safety Rules 2017</a></li>
+                    <li><a href="#">Essential Commodities Act</a></li>
+                    <li><a href="#">Gazette Act 2019</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Grievance Resolution</h4>
+                <ul>
+                    <li><a href="#">State Food Authority</a></li>
+                    <li><a href="#">District Grievance Redressal Officers</a></li>
+                    <li><a href="#">Text Messaging Service</a></li>
+                    <li><a href="#">Monitoring Committee Reports</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Other Links</h4>
+                <ul>
+                    <li><a href="#">Consumer Protection Department</a></li>
+                    <li><a href="#">Tamil Nadu Consumer Goods Corporation</a></li>
+                    <li><a href="#">Register of Cooperative Societies</a></li>
+                    <li><a href="#">Election Commission</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025 Department of Food Supply and Consumer Protection, Government of Tamil Nadu</p>
+        </div>
+    </footer>
+</body>
+</html>
